@@ -1,0 +1,88 @@
+class bank:
+    def _init_(self):
+        self.Accounts = []
+        
+    def create_account(self, name, pin):
+        account = account(name,pin)
+        self.account[account.account_number] = account 
+        return account.account_number
+    
+    def close_account(self, account_number):
+        del self.account[account_number]
+
+    def  get_account(self, account_number, pin):
+        
+        def get_account(self,account_number,pin):
+         if account_number in self.account:
+            account = self.account[account_number]
+            if account.pin == pin:
+                return account 
+            return None
+        
+bank()
+
+while True:
+    print("Welcome to The Bank of Kaila. Please chose an account: ")
+    print("1. Create an account")
+    print("2. Login")
+    
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        name = input("Enter your name: ")
+        pin  = input("Enter you pin please: ")
+        print("Account was created with this account number (325370)")
+
+    elif choice  == "2":
+        account_number = input("Enter your name: ")
+        pin = input("Enter your pin: ")
+    while True:
+                print("Chose an option")
+                print("1. Check balance")
+                print("2. Deposit")
+                print("3. Withdraw")
+                print("4. Modify account")
+                print("5. Close account")
+
+                choice = input("Enter choice: ")
+
+                if choice == "1":
+                    print("Your balance is (100,567.50())")
+                elif choice == "2":
+                    input("How much would you like to deposit =  ")
+                    print("Your money has know been deposited. Thank you for using Bank of Kaila")
+                    
+
+
+                elif choice ==  "3":
+                    input("How much would you like to withdraw =  ")
+                    print("Your money has now been withdrawn. Thank you for using Bank of Kaila.")
+
+                elif choice == "4":
+                    print("How woud you like to modify your account")
+                    print("1. Change name")
+                    print("2. Change pin")
+                    
+                    choice = input("Enter choice: ")
+                    if choice == "1":
+                        input("What would you like to change your name to ")
+                        print("We changed you name in the system")
+
+                    elif choice == "2":
+                        input("What would you ike to change your pin to ")
+                        print("Your pin has been changed in the system")
+
+
+                elif choice == "5":
+                    print("Are you sure you want to close this account")
+                    answer = str(input("Yes or No "))
+                    if answer == 'Yes':
+                        print("Your account will be closed shortly")
+
+                    else:
+                        print("Ok we'll not close your account")
+
+
+                    def check_balance():
+                        print("Your balance is (account.check_balance())")
+
